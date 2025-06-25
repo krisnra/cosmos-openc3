@@ -1,0 +1,15 @@
+require 'bundler/gem_tasks'
+
+# Task untuk build gem plugin (gunakan VERSION=x.y.z jika perlu versi tertentu)
+desc "Build the openc3-cosmos-simulasi plugin gem"
+task :build do
+  sh "gem build openc3-cosmos-simulasi.gemspec"
+end
+
+# Task untuk menginstal gem (akan build dulu lalu install ke sistem Ruby Gems lokal)
+desc "Install the openc3-cosmos-simulasi plugin gem"
+task :install => :build do
+  built_gem = Dir.glob("openc3-cosmos-simulasi-*.gem").max_by { |f| File.mtime(f) }
+  sh "gem install #{built_gem}"
+end
+

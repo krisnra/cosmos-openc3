@@ -1,0 +1,7 @@
+# Konfigurasi Target SAT1
+LANGUAGE ruby
+
+# Gunakan file definisi command dan telemetry berikut:
+COMMANDS cmd.txt
+TELEMETRY tlm.txt
+

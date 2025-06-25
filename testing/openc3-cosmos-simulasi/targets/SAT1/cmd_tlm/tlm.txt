@@ -1,0 +1,14 @@
+# Definisi Telemetry untuk target SAT1
+
+TELEMETRY SAT1 STATUS BIG_ENDIAN "Status telemetry packet"
+    # Field identifikasi paket telemetry (8-bit). Nilai 1 menandakan ini paket STATUS.
+    ID_ITEM TLM_ID 0 8 UINT 1 "Telemetry packet ID (must be 1)"
+    # Temperature 16-bit pada bit offset 8
+    ITEM TEMP 8 16 UINT "Temperature sensor reading"
+        UNITS Celsius C          # Menampilkan dengan satuan Celsius
+    # Voltage 16-bit pada bit offset 24
+    ITEM VOLT 24 16 UINT "Voltage reading"
+        UNITS Millivolts mV      # Satuan mV
+    # Counter 8-bit pada bit offset 40
+    ITEM COUNT 40 8 UINT "Packet counter"
+

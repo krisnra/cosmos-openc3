@@ -1,0 +1,12 @@
+# Definisi Command untuk target SAT1
+
+COMMAND SAT1 PING BIG_ENDIAN "Ping command - no parameters"
+    # ID command 0x01 sebagai identifikasi (8-bit constant)
+    PARAMETER CMD_ID 0 8 UINT 0x01 0x01 0x01 "Command ID for PING"
+
+COMMAND SAT1 SET_VALUE BIG_ENDIAN "Set an 8-bit value on SAT1"
+    # ID command 0x02 sebagai identifikasi
+    PARAMETER CMD_ID 0 8 UINT 0x02 0x02 0x02 "Command ID for SET_VALUE"
+    # Parameter 8-bit yang dikirim setelah ID
+    PARAMETER VALUE 8 8 UINT 0 255 0 "Value to set (0-255)"
+

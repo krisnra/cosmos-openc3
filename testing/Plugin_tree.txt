@@ -1,0 +1,207 @@
+krisn@krisn-VMware-Virtual-Platform:~/Downloads/openc3-cosmos-demo-6.5.0$ tree
+.
+├── data
+│   ├── lib
+│   │   ├── print_script_engine.py
+│   │   └── puts_script_engine.rb
+│   ├── LICENSE.txt
+│   ├── microservices
+│   │   ├── EXAMPLE
+│   │   │   └── example_target.rb
+│   │   └── TEMPLATED
+│   │       └── scpi_target.rb
+│   ├── plugin.txt
+│   ├── Rakefile
+│   ├── README.md
+│   ├── requirements.txt
+│   ├── targets
+│   │   ├── EXAMPLE
+│   │   │   ├── cmd_tlm
+│   │   │   │   ├── example_cmds.txt
+│   │   │   │   └── example_tlm.txt
+│   │   │   ├── lib
+│   │   │   │   └── example_interface.rb
+│   │   │   └── target.txt
+│   │   ├── INST
+│   │   │   ├── cmd_tlm
+│   │   │   │   ├── _ccsds_cmd.txt
+│   │   │   │   ├── _ccsds_tlm.txt
+│   │   │   │   ├── inst_cmds.txt
+│   │   │   │   ├── inst_tlm_override.txt
+│   │   │   │   └── inst_tlm.txt
+│   │   │   ├── data
+│   │   │   │   ├── attitude.bin
+│   │   │   │   └── position.bin
+│   │   │   ├── lib
+│   │   │   │   ├── example_limits_response.rb
+│   │   │   │   ├── inst_cmd_validator.rb
+│   │   │   │   └── sim_inst.rb
+│   │   │   ├── procedures
+│   │   │   │   ├── autonomic.rb
+│   │   │   │   ├── calendar.rb
+│   │   │   │   ├── checks.rb
+│   │   │   │   ├── collect.rb
+│   │   │   │   ├── disconnect.rb
+│   │   │   │   ├── example.puts
+│   │   │   │   ├── file_dialog.rb
+│   │   │   │   ├── metadata.rb
+│   │   │   │   ├── my_script_suite.rb
+│   │   │   │   ├── my_test_suite.rb
+│   │   │   │   ├── screens.rb
+│   │   │   │   ├── scripting.rb
+│   │   │   │   ├── stash.rb
+│   │   │   │   ├── streaming.rb
+│   │   │   │   ├── target_file.rb
+│   │   │   │   └── utilities
+│   │   │   │       ├── clear.rb
+│   │   │   │       └── collect.rb
+│   │   │   ├── public
+│   │   │   │   ├── ganymede.jpg
+│   │   │   │   ├── ground_error.png
+│   │   │   │   ├── ground_off.png
+│   │   │   │   ├── ground_on.png
+│   │   │   │   ├── satellite.png
+│   │   │   │   ├── spiral.jpg
+│   │   │   │   └── sun.jpg
+│   │   │   ├── screens
+│   │   │   │   ├── adcs.txt
+│   │   │   │   ├── array.txt
+│   │   │   │   ├── block.txt
+│   │   │   │   ├── commanding.txt
+│   │   │   │   ├── _footer.txt
+│   │   │   │   ├── graphs.txt
+│   │   │   │   ├── ground.txt
+│   │   │   │   ├── hs.txt
+│   │   │   │   ├── image.txt
+│   │   │   │   ├── latest.txt
+│   │   │   │   ├── launcher.txt
+│   │   │   │   ├── limits.txt
+│   │   │   │   ├── other.txt
+│   │   │   │   ├── params.txt
+│   │   │   │   ├── rollup.txt
+│   │   │   │   ├── simple.txt
+│   │   │   │   ├── tabs.txt
+│   │   │   │   └── web.txt
+│   │   │   ├── tables
+│   │   │   │   ├── bin
+│   │   │   │   │   └── ConfigTables.bin
+│   │   │   │   ├── config
+│   │   │   │   │   ├── ConfigTables_def.txt
+│   │   │   │   │   ├── MCConfigurationTable_def.txt
+│   │   │   │   │   ├── PPSSelectionTable_def.txt
+│   │   │   │   │   └── TLMMonitoringTable_def.txt
+│   │   │   │   └── procedures
+│   │   │   │       ├── download.rb
+│   │   │   │       └── upload.rb
+│   │   │   └── target.txt
+│   │   ├── INST2
+│   │   │   ├── cmd_tlm
+│   │   │   │   ├── _ccsds_cmd.txt
+│   │   │   │   ├── _ccsds_tlm.txt
+│   │   │   │   ├── inst_cmds.txt
+│   │   │   │   ├── inst_tlm_override.txt
+│   │   │   │   └── inst_tlm.txt
+│   │   │   ├── data
+│   │   │   │   ├── attitude.bin
+│   │   │   │   └── position.bin
+│   │   │   ├── lib
+│   │   │   │   ├── example_limits_response.py
+│   │   │   │   ├── helper.py
+│   │   │   │   ├── inst2_cmd_validator.py
+│   │   │   │   └── sim_inst.py
+│   │   │   ├── procedures
+│   │   │   │   ├── autonomic.py
+│   │   │   │   ├── calendar.py
+│   │   │   │   ├── checks.py
+│   │   │   │   ├── collect.py
+│   │   │   │   ├── disconnect.py
+│   │   │   │   ├── example.print
+│   │   │   │   ├── file_dialog.py
+│   │   │   │   ├── metadata.py
+│   │   │   │   ├── my_script_suite.py
+│   │   │   │   ├── my_test_suite.py
+│   │   │   │   ├── numpy.py
+│   │   │   │   ├── screens.py
+│   │   │   │   ├── scripting.py
+│   │   │   │   ├── stash.py
+│   │   │   │   ├── streaming.py
+│   │   │   │   ├── target_file.py
+│   │   │   │   └── utilities
+│   │   │   │       ├── clear.py
+│   │   │   │       └── collect.py
+│   │   │   ├── public
+│   │   │   │   ├── ganymede.jpg
+│   │   │   │   ├── ground_error.png
+│   │   │   │   ├── ground_off.png
+│   │   │   │   ├── ground_on.png
+│   │   │   │   ├── satellite.png
+│   │   │   │   ├── spiral.jpg
+│   │   │   │   └── sun.jpg
+│   │   │   ├── screens
+│   │   │   │   ├── adcs.txt
+│   │   │   │   ├── array.txt
+│   │   │   │   ├── block.txt
+│   │   │   │   ├── commanding.txt
+│   │   │   │   ├── _footer.txt
+│   │   │   │   ├── graphs.txt
+│   │   │   │   ├── ground.txt
+│   │   │   │   ├── hs.txt
+│   │   │   │   ├── image.txt
+│   │   │   │   ├── latest.txt
+│   │   │   │   ├── launcher.txt
+│   │   │   │   ├── limits.txt
+│   │   │   │   ├── other.txt
+│   │   │   │   ├── params.txt
+│   │   │   │   ├── rollup.txt
+│   │   │   │   ├── simple.txt
+│   │   │   │   ├── tabs.txt
+│   │   │   │   └── web.txt
+│   │   │   ├── tables
+│   │   │   │   ├── bin
+│   │   │   │   │   └── ConfigTables.bin
+│   │   │   │   ├── config
+│   │   │   │   │   ├── ConfigTables_def.txt
+│   │   │   │   │   ├── MCConfigurationTable_def.txt
+│   │   │   │   │   ├── PPSSelectionTable_def.txt
+│   │   │   │   │   └── TLMMonitoringTable_def.txt
+│   │   │   │   └── procedures
+│   │   │   │       ├── download.py
+│   │   │   │       └── upload.py
+│   │   │   └── target.txt
+│   │   ├── SYSTEM
+│   │   │   ├── cmd_tlm
+│   │   │   │   └── limits_groups.txt
+│   │   │   ├── procedures
+│   │   │   │   ├── example_test.rb
+│   │   │   │   ├── interactive.rb
+│   │   │   │   ├── limits_api_test.rb
+│   │   │   │   ├── openc3_api_test.rb
+│   │   │   │   ├── run_example_test.rb
+│   │   │   │   └── test.rb
+│   │   │   ├── screens
+│   │   │   │   └── status.txt
+│   │   │   └── target.txt
+│   │   └── TEMPLATED
+│   │       ├── cmd_tlm
+│   │       │   ├── templated_cmds.txt
+│   │       │   └── templated_tlm.txt
+│   │       ├── lib
+│   │       │   └── templated_interface.rb
+│   │       └── target.txt
+│   └── tools
+│       └── widgets
+│           ├── BigWidget
+│           │   ├── BigWidget.umd.min.js
+│           │   └── BigWidget.umd.min.js.map
+│           ├── DataviewerquaternionWidget
+│           │   ├── DataviewerquaternionWidget.umd.min.js
+│           │   └── DataviewerquaternionWidget.umd.min.js.map
+│           ├── DataviewertimeWidget
+│           │   ├── DataviewertimeWidget.umd.min.js
+│           │   └── DataviewertimeWidget.umd.min.js.map
+│           └── HelloworldWidget
+│               ├── HelloworldWidget.umd.min.js
+│               └── HelloworldWidget.umd.min.js.map
+├── checksums.yaml
+└── metadata
+
