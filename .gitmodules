@@ -1,0 +1,3 @@
+[submodule "cosmos-project"]
+	path = cosmos-project
+	url = https://github.com/OpenC3/cosmos-project.git
