@@ -1,0 +1,15 @@
+{
+  "name": "openc3-cosmos-simulasi-0.0.2.gem__20250620102732",
+  "variables": {},
+  "plugin_txt_lines": [
+    "# Plugin configuration for openc3-cosmos-simulasi",
+    "TARGET SAT1 SAT1",
+    "",
+    "# Interface UDP untuk target SAT1: host 127.0.0.1, kirim command ke port 26000, terima tlm di port 26001",
+    "INTERFACE SAT1_INT udp_interface.rb 192.168.214.137 26000 8081 nil nil 10.0 nil",
+    "    MAP_TARGET SAT1",
+    ""
+  ],
+  "needs_dependencies": true,
+  "updated_at": 1750684010926895335
+}
